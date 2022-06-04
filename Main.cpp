@@ -8,7 +8,7 @@
 #include <windows.h> /// для HANDLE, курсора, цвета
 #include <conio.h>  ///для _kbhit
 #include "Class.hpp" ///Подключения файл с классами
-#include "Snail.cpp" ///Подключение файла с основными функциями
+#include "Snake.cpp" ///Подключение файла с основными функциями
 
 using namespace std;
 
