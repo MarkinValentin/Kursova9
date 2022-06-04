@@ -1,4 +1,7 @@
 /// \file
+/// <summary>
+/// Файл с исполняемыми функцими
+/// </summary>
 #include <iostream>  ///стандартная библиотека
 #include <time.h> ///случайные числа
 #include <stdio.h> ///для printf

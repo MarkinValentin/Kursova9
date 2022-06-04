@@ -1,4 +1,7 @@
 /// \file
+/// <summary>
+/// Основной файл
+/// </summary>
 #include <iostream>  ///стандартная библиотека
 #include <time.h> ///случайные числа
 #include <stdio.h> ///для printf
@@ -26,7 +29,7 @@ int main()
 		//ждет пока нажмем
 		while (!_kbhit()) 
 		{
-			///движение
+			//движение
 			switch (Move(g))
 			{
 			// Вывод надписей справа от поля

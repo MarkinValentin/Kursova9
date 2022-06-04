@@ -1,0 +1,270 @@
+\hypertarget{_snail_8cpp}{}\doxysection{New/\+Kursova9/\+Snail.cpp File Reference}
+\label{_snail_8cpp}\index{New/Kursova9/Snail.cpp@{New/Kursova9/Snail.cpp}}
+
+
+Файл с исполняемыми функцими  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Class.\+hpp\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} \{ \newline
+\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}{Black}} = 0
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}{Blue}} = 1
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}{Green}} = 2
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}{Cyan}} = 3
+, \newline
+\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}{Red}} = 4
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}{Magenta}} = 5
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}{Brown}} = 6
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}{Light\+Gray}} = 7
+, \newline
+\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}{Dark\+Gray}} = 8
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}{Light\+Blue}} = 9
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}{Light\+Green}} = 10
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}{Light\+Cyan}} = 11
+, \newline
+\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}{Light\+Red}} = 12
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}{Light\+Magenta}} = 13
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}{Yellow}} = 14
+, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}{White}} = 15
+ \}
+\item 
+enum \{ \mbox{\hyperlink{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}{END}}
+, \mbox{\hyperlink{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}{WALL}}
+, \mbox{\hyperlink{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}}
+, \mbox{\hyperlink{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}{MOVE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_snail_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}{Goto\+XY}} (int X, int Y)
+\item 
+void \mbox{\hyperlink{_snail_8cpp_ab9924d9a342601953ccdccb52710092b}{Set\+Color}} (\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} text, \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} background)
+\item 
+void \mbox{\hyperlink{_snail_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}{Plus\+Apple}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция разброса яблок \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snail_8cpp_a336b858bffffc543c56252f1f76baf5b}{Game\+Speed}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция старта змейки\+: ее координат и скорости \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snail_8cpp_a6ecce94cdaa807c5a1f14911f886d186}{Level}} ()
+\begin{DoxyCompactList}\small\item\em Вывод надписей \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snail_8cpp_a87402161f83745865b997797e7f92746}{Snake\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Вывод сообщения о задании \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snail_8cpp_a2a4279c0b454248c039c231f57a512e7}{WALL\+\_\+2}} ()
+\begin{DoxyCompactList}\small\item\em Вывод всей информации, отображаемой в меню справа от поля \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_snail_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}{Move}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция которая двигает и рисует \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{_snail_8cpp_a36b9671cd6945563286390e4dc3316ab}{h\+Console}}
+\begin{DoxyCompactList}\small\item\em Вывод цветного текста в консоль \end{DoxyCompactList}\item 
+HANDLE \mbox{\hyperlink{_snail_8cpp_a70bfca3175ba9dedad6b54203a18c95c}{h\+Std\+Out}} = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)
+\begin{DoxyCompactList}\small\item\em HANDLE h\+Stdout, h\+Stdin;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Файл с исполняемыми функцими 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}\label{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END@{END}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!END@{END}}}\mbox{\Hypertarget{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}\label{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}} 
+END&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WALL@{WALL}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!WALL@{WALL}}}\mbox{\Hypertarget{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}\label{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}} 
+WALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLUS@{PLUS}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!PLUS@{PLUS}}}\mbox{\Hypertarget{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}\label{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}} 
+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE@{MOVE}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!MOVE@{MOVE}}}\mbox{\Hypertarget{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}\label{_snail_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}} 
+MOVE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}} 
+\index{Snail.cpp@{Snail.cpp}!ConsoleColor@{ConsoleColor}}
+\index{ConsoleColor@{ConsoleColor}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{ConsoleColor}{ConsoleColor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}
+
+Выбор цвета \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Black@{Black}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Black@{Black}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}} 
+Black&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Blue@{Blue}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Blue@{Blue}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}} 
+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Green@{Green}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Green@{Green}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}} 
+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cyan@{Cyan}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Cyan@{Cyan}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}} 
+Cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Red@{Red}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Red@{Red}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}} 
+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Magenta@{Magenta}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Magenta@{Magenta}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}} 
+Magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Brown@{Brown}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Brown@{Brown}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}} 
+Brown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightGray@{LightGray}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightGray@{LightGray}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}} 
+Light\+Gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DarkGray@{DarkGray}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!DarkGray@{DarkGray}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}} 
+Dark\+Gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightBlue@{LightBlue}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightBlue@{LightBlue}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}} 
+Light\+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightGreen@{LightGreen}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightGreen@{LightGreen}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}} 
+Light\+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightCyan@{LightCyan}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightCyan@{LightCyan}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}} 
+Light\+Cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightRed@{LightRed}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightRed@{LightRed}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}} 
+Light\+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightMagenta@{LightMagenta}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!LightMagenta@{LightMagenta}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}} 
+Light\+Magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yellow@{Yellow}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!Yellow@{Yellow}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}} 
+Yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{White@{White}!Snail.cpp@{Snail.cpp}}\index{Snail.cpp@{Snail.cpp}!White@{White}}}\mbox{\Hypertarget{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}\label{_snail_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}} 
+White&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_snail_8cpp_a336b858bffffc543c56252f1f76baf5b}\label{_snail_8cpp_a336b858bffffc543c56252f1f76baf5b}} 
+\index{Snail.cpp@{Snail.cpp}!GameSpeed@{GameSpeed}}
+\index{GameSpeed@{GameSpeed}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{GameSpeed()}{GameSpeed()}}
+{\footnotesize\ttfamily void Game\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция старта змейки\+: ее координат и скорости 
+
+\mbox{\Hypertarget{_snail_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}\label{_snail_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}} 
+\index{Snail.cpp@{Snail.cpp}!GotoXY@{GotoXY}}
+\index{GotoXY@{GotoXY}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{GotoXY()}{GotoXY()}}
+{\footnotesize\ttfamily void Goto\+XY (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y }\end{DoxyParamCaption})}
+
+Функция помещает курсор текстового экрана в точку с координатами х,у. \mbox{\Hypertarget{_snail_8cpp_a6ecce94cdaa807c5a1f14911f886d186}\label{_snail_8cpp_a6ecce94cdaa807c5a1f14911f886d186}} 
+\index{Snail.cpp@{Snail.cpp}!Level@{Level}}
+\index{Level@{Level}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily void Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод надписей 
+
+\mbox{\Hypertarget{_snail_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}\label{_snail_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}} 
+\index{Snail.cpp@{Snail.cpp}!Move@{Move}}
+\index{Move@{Move}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily int Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция которая двигает и рисует 
+
+\mbox{\Hypertarget{_snail_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}\label{_snail_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}} 
+\index{Snail.cpp@{Snail.cpp}!PlusApple@{PlusApple}}
+\index{PlusApple@{PlusApple}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{PlusApple()}{PlusApple()}}
+{\footnotesize\ttfamily void Plus\+Apple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция разброса яблок 
+
+\mbox{\Hypertarget{_snail_8cpp_ab9924d9a342601953ccdccb52710092b}\label{_snail_8cpp_ab9924d9a342601953ccdccb52710092b}} 
+\index{Snail.cpp@{Snail.cpp}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}]{text,  }\item[{\mbox{\hyperlink{_snail_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}]{background }\end{DoxyParamCaption})}
+
+Функция выбора цвета \mbox{\Hypertarget{_snail_8cpp_a87402161f83745865b997797e7f92746}\label{_snail_8cpp_a87402161f83745865b997797e7f92746}} 
+\index{Snail.cpp@{Snail.cpp}!SnakeStart@{SnakeStart}}
+\index{SnakeStart@{SnakeStart}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{SnakeStart()}{SnakeStart()}}
+{\footnotesize\ttfamily void Snake\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод сообщения о задании 
+
+\mbox{\Hypertarget{_snail_8cpp_a2a4279c0b454248c039c231f57a512e7}\label{_snail_8cpp_a2a4279c0b454248c039c231f57a512e7}} 
+\index{Snail.cpp@{Snail.cpp}!WALL\_2@{WALL\_2}}
+\index{WALL\_2@{WALL\_2}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{WALL\_2()}{WALL\_2()}}
+{\footnotesize\ttfamily void WALL\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод всей информации, отображаемой в меню справа от поля 
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_snail_8cpp_a36b9671cd6945563286390e4dc3316ab}\label{_snail_8cpp_a36b9671cd6945563286390e4dc3316ab}} 
+\index{Snail.cpp@{Snail.cpp}!hConsole@{hConsole}}
+\index{hConsole@{hConsole}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{hConsole}{hConsole}}
+{\footnotesize\ttfamily HANDLE h\+Console}
+
+
+
+Вывод цветного текста в консоль 
+
+\mbox{\Hypertarget{_snail_8cpp_a70bfca3175ba9dedad6b54203a18c95c}\label{_snail_8cpp_a70bfca3175ba9dedad6b54203a18c95c}} 
+\index{Snail.cpp@{Snail.cpp}!hStdOut@{hStdOut}}
+\index{hStdOut@{hStdOut}!Snail.cpp@{Snail.cpp}}
+\doxysubsubsection{\texorpdfstring{hStdOut}{hStdOut}}
+{\footnotesize\ttfamily HANDLE h\+Std\+Out = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)}
+
+
+
+HANDLE h\+Stdout, h\+Stdin;. 
+
