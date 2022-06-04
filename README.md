@@ -13,7 +13,7 @@
 ```python
 Git clone https://github.com/MarkinValentin/Kursova9.git 
 ```
-Открыть любым доступным способом, собрать и запустить
++ Открыть любым доступным способом, собрать и запустить
 
 # Game Snake in C++
 ## A little information
@@ -26,5 +26,7 @@ Git clone https://github.com/MarkinValentin/Kursova9.git
 + In the end, I got a working code to provide it to the teacher.
 
 ## How to install?
-+ Git clone https://github.com/MarkinValentin/Kursova9.git
+```python
+Git clone https://github.com/MarkinValentin/Kursova9.git
+```
 + Open in any convenient way, build and run
