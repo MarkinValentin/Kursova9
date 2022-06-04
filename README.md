@@ -9,8 +9,11 @@
 + В итоге, я получил рабочий код для предоставления его преподавателю.
 
 ## Как устанавливать?
-+ Git clone https://github.com/MarkinValentin/Kursova9.git 
-+ Открыть любым доступным способом, собрать и запустить
+
+```python
+Git clone https://github.com/MarkinValentin/Kursova9.git 
+```
+Открыть любым доступным способом, собрать и запустить
 
 # Game Snake in C++
 ## A little information
