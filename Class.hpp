@@ -1,5 +1,3 @@
-#include <windows.h> // для HANDLE, курсора, цвета
-
 class Snake  // структура змейка 
 {
 public:COORD* t; //точки
