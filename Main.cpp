@@ -1,35 +1,35 @@
-#include <iostream>  //стандартная библиотека
-#include <time.h> //случайные числа
-#include <stdio.h> //для printf
-#include <windows.h> // для HANDLE, курсора, цвета
-#include <conio.h>  //для _kbhit
-#include "Class.hpp" //подлючаю файл с классами
-#include "snail.cpp"
+/// \file
+#include <iostream>  ///стандартная библиотека
+#include <time.h> ///случайные числа
+#include <stdio.h> ///для printf
+#include <windows.h> /// для HANDLE, курсора, цвета
+#include <conio.h>  ///для _kbhit
+#include "Class.hpp" ///Подключения файл с классами
+#include "Snail.cpp" ///Подключение файла с основными функциями
 
 using namespace std;
+
+/// 
+/// Основная функция
+/// 
 int main()
 {
-	hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //получаем дескриптор консоли
+	//получаем дескриптор консоли
+	hConsole = GetStdHandle(STD_OUTPUT_HANDLE); 
 	int key = 0, count = 0;
-	bool Pause = false;
 	Game g;
 	GameSpeed(g);
 	WALL_2();
 	srand(time(0));
-	bool pause = false;
 	while (key != 27)
 	{
-		while (!_kbhit()) //ждет пока нажмем
+		//ждет пока нажмем
+		while (!_kbhit()) 
 		{
-			if (Pause == true)
+			///движение
+			switch (Move(g))
 			{
-				Sleep(1);
-				continue;
-			}
-
-			switch (Move(g))//движение
-			{
-
+			// Вывод надписей справа от поля
 			case PLUS:
 				++count;
 				g.pause -= 1;
@@ -40,10 +40,12 @@ int main()
 				GotoXY(64, 5); cout << "Speed:" << g.pause << endl;
 				GotoXY(64, 7); cout << "Controls:" << endl;
 				GotoXY(64, 8); cout << "Esc:exit" << endl;
-				GotoXY(64, 9);printf("%c", 24);cout << ":Up" << endl;
-				GotoXY(64, 10);printf("%c", 25);cout << ":Down" << endl;
-				GotoXY(64, 11);printf("%c", 27);cout << ":Left" << endl;
-				GotoXY(64, 12);printf("%c", 26);cout << ":Right" << endl;
+				GotoXY(64, 9); cout << ":Up" << endl;
+				GotoXY(64, 10);cout << ":Down" << endl;
+				GotoXY(64, 11);cout << ":Left" << endl;
+				GotoXY(64, 12);cout << ":Right" << endl;
+
+				// Если выиграли
 				if (count == 50)
 				{
 					SetColor(White, Black);
@@ -53,26 +55,19 @@ int main()
 				}
 				break;
 
-			case WALL:
-
+			// Если проиграли 
 			case END:
 				GotoXY(23, 1); printf("You lose\n\n\t\t\t"); //Вы проиграли
 				_getch();
 				break;
 			}
-
-			Sleep(g.pause); //Задержка
+			//Задержка
+			Sleep(g.pause); 
 		}
+		// работа кнопок
 		key = _getch();
-		//работа кнопок
-		if (key == 'P' || key == 'p')
-			Pause = !Pause;
-		else if (key == 'S' || key == 's')
-			SnakeStart();
-		else if (key == 'L' || key == 'l')
-			Level();
-		//работа кнопок движения 
-		else if (key == 0 || key == 224)
+		// работа кнопок движения 
+		if (key == 0 || key == 224)
 		{
 			key = _getch();
 

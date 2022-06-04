@@ -1,14 +1,31 @@
-class Snake  // структура змейка 
-{
-public:COORD* t; //точки
-public:int PCount; //количество яблок
+/// \file
+/*! Cтруктура змейка
+*/
+class Snake  
+{ ///точки
+public:COORD* t;
+	  ///количество яблок
+public:int PCount; 
+	  /// конструктор для класса
+explicit Snake();
 };
-enum control { LEFT, UP, RIGHT, DOWN }; //направление змейки
-class Game //даные-точности: змейки, яблок, передвижение по X и Y, задержка, направление
-{
-public:Snake viper; //змейка
-public:COORD apple; //яблоко
-public:int dx, dy; //передвижение
-public:int pause; //задержка
-public:int route; //направление
+///направление змейки
+enum control { LEFT, UP, RIGHT, DOWN }; 
+
+/*!Даные - точности: змейки, яблок, передвижение по X и Y, задержка, направление
+*/
+class Game 
+{///змейка
+public:Snake viper; 
+	  ///яблоко
+public:COORD apple; 
+	  
+public:int dy;///передвижение
+public:int dx;///
+	  ///задержка
+public:int pause; 
+	  ///направление
+public:int route; 
+	  ///конструктор для класса
+explicit Game(); 
 };

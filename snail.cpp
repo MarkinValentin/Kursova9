@@ -1,22 +1,31 @@
-#include <iostream>  //стандартная библиотека
-#include <time.h> //случайные числа
-#include <stdio.h> //для printf
-#include <windows.h> // для HANDLE, курсора, цвета
-#include <conio.h>  //для _kbhit
-#include "Class.hpp" //подлючаю файл с классами
+/// \file
+#include <iostream>  ///стандартная библиотека
+#include <time.h> ///случайные числа
+#include <stdio.h> ///для printf
+#include <windows.h> /// для HANDLE, курсора, цвета
+#include <conio.h>  ///для _kbhit
+#include "Class.hpp" ///подлючаю файл с классами
 
 using namespace std;
-
+/// <summary>
+/// Вывод цветного текста в консоль
+/// </summary>
 HANDLE hConsole;
-//HANDLE hStdout, hStdin;
+
+///HANDLE hStdout, hStdin;
 HANDLE hStdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
+/// 
+/// Функция помещает курсор текстового экрана в точку с координатами х,у.
+/// 
 void GotoXY(int X, int Y)
 {
 	COORD coord = { X, Y };
 	SetConsoleCursorPosition(hStdOut, coord);
 }
-
+/// 
+/// Выбор цвета
+/// 
 enum ConsoleColor
 {
 	Black = 0,
@@ -36,13 +45,15 @@ enum ConsoleColor
 	Yellow = 14,
 	White = 15
 };
-
+/// 
+/// Функция выбора цвета
+/// 
 void SetColor(ConsoleColor text, ConsoleColor background)
 {
 	SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
 }
-
-void PlusApple(Game& g) //Функция разброса яблок
+///Функция разброса яблок
+void PlusApple(Game& g) 
 {
 	int i, x, y;
 	int n = g.viper.PCount;
@@ -63,8 +74,8 @@ void PlusApple(Game& g) //Функция разброса яблок
 	printf("%c", 4); //рисуем яблоко 
 }
 
-
-void GameSpeed(Game& g) // Функция старта змейки: ее координат и скорости
+/// Функция старта змейки: ее координат и скорости
+void GameSpeed(Game& g) 
 {
 	system("cls");
 	g.viper.PCount = 3; //начальная длина змеи в точках
@@ -79,39 +90,61 @@ void GameSpeed(Game& g) // Функция старта змейки: ее коо
 	g.pause = 100;//скорость передвижения змеи
 	PlusApple(g);//появление яблока
 }
+/// <summary>
+/// Вывод надписей
+/// </summary>
 void Level()
 {
 	GotoXY(10, 10);cout << "You will never win" << endl; //НАДПИСЬ: Вы никогда не выиграете
 	GotoXY(10, 11);cout << "if you are not careful!" << endl; //НАДПИСЬ: если не будете бдительны!
 }
+/// <summary>
+/// Вывод сообщения о задании
+/// </summary>
 void SnakeStart()
 {
 	GotoXY(10, 15);cout << "Task: Collect 50 apples!" << endl; //НАДПИСЬ: Задание: Собери 50 яблок!
 }
-void WALL_2() //Вся информация, отображаемая в меню справа от поля
+/// <summary>
+/// Вывод всей информации, отображаемой в меню справа от поля
+/// </summary>
+void WALL_2() 
 {
 	SetColor(LightBlue, Black);
-	GotoXY(20, 0);cout << "Snake game by Valentin Markin" << endl;  //НАДПИСЬ: Игра Змейка Маркина Валентина
-	GotoXY(64, 2);cout << "Info:" << endl; //Данные
-	GotoXY(64, 3);cout << "Apples:0" << endl; //Яблок
-	GotoXY(64, 4); cout << "Lenght:3" << endl; //Длина
-	GotoXY(64, 5); cout << "Speed:0" << endl; //Скорость
-	GotoXY(64, 7); cout << "Controls:" << endl; //Управление
-	GotoXY(64, 8); cout << "Esc:Exit" << endl; //Выход
-	GotoXY(64, 9);printf("%c", 24);cout << ":Up" << endl; //Вверх
-	GotoXY(64, 10);printf("%c", 25);cout << ":Down" << endl;   //Вниз
-	GotoXY(64, 11);printf("%c", 27);cout << ":Left" << endl;  //Влево
-	GotoXY(64, 12);printf("%c", 26);cout << ":Right" << endl; //Вправо
-	{SetColor(LightMagenta, Black);
+	//НАДПИСЬ: Игра Змейка Маркина Валентина
+	GotoXY(20, 0);cout << "Snake game by Valentin Markin" << endl;  
+	//Данные
+	GotoXY(64, 2);cout << "Info:" << endl; 
+	//Яблок
+	GotoXY(64, 3);cout << "Apples:0" << endl;
+	//Длина
+	GotoXY(64, 4); cout << "Lenght:3" << endl; 
+	//Скорость
+	GotoXY(64, 5); cout << "Speed:0" << endl; 
+	//Управление
+	GotoXY(64, 7); cout << "Controls:" << endl; 
+	//Выход
+	GotoXY(64, 8); cout << "Esc:Exit" << endl; 
+	//Вверх
+	GotoXY(64, 9);cout << ":Up" << endl;
+	//Вниз 
+	GotoXY(64, 10);cout << ":Down" << endl;  
+	//Влево
+	GotoXY(64, 11);cout << ":Left" << endl; 
+	//Вправо
+	GotoXY(64, 12);cout << ":Right" << endl; 
 
-	GotoXY(2, 2); //Рисуем верхнюю горизонтальную линию-стенку
+	{SetColor(LightMagenta, Black);
+	//Рисуем верхнюю горизонтальную линию-стенку
+	GotoXY(2, 2); 
 	int m = 0;
 	for (m = 0; m < 60; m++)
 	{
 		printf("*");
 	}}
 	{
-		GotoXY(2, 24); //Рисуем нижнюю горизонтальную линию-стенку
+		//Рисуем нижнюю горизонтальную линию-стенку
+		GotoXY(2, 24); 
 		int m = 0;
 		for (m = 0; m < 60;m++)
 		{
@@ -130,8 +163,8 @@ void WALL_2() //Вся информация, отображаемая в мен�
 	}
 }
 
-//Функция которая двигает и рисует
 enum { END, WALL, PLUS, MOVE };
+///Функция которая двигает и рисует
 int Move(Game& g)
 {
 	int& n = g.viper.PCount;
