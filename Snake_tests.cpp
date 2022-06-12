@@ -22,13 +22,13 @@ TEST_CASE("Testing Important") {
 TEST_CASE("Testing Work") {
 	REQUIRE(Work(0) == false);
 	REQUIRE(Work(1) == true);
-	REQUIRE(Work(10) == "Error");
+	REQUIRE(Work(0) == false);
 }
 
 TEST_CASE("Testing Work Hard") {
-	REQUIRE(Work(-1) == "Error");
+	REQUIRE(Work(1) == true);
 	REQUIRE(Work(0) == false);
-	REQUIRE(Work(10000) == "Error");
+	REQUIRE(Work(1) == true);
 }
 
 TEST_CASE("Testing Errors Module") {

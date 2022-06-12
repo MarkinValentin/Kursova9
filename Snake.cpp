@@ -53,13 +53,13 @@ enum ConsoleColor
 /// 
 auto Important(int value) {
 	if (value > 0) {
-		return ("value > 0")
+		return ("value > 0");
 	}
 	else if (value < 0) {
-		return ("value < 0")
+		return ("value < 0");
 	}
 	else {
-		return ("value = 0")
+		return ("value = 0");
 	}
 }
 /// 
@@ -75,13 +75,10 @@ void SetColor(ConsoleColor text, ConsoleColor background)
 /// 
 auto Work(int flag) {
 	if (flag == 0) {
-		return false
+		return false;
 	}
 	else if (flag == 1) {
-		return true
-	}
-	else {
-		return ("Error")
+		return true;
 	}
 }
 
@@ -144,16 +141,16 @@ void SnakeStart()
 /// 
 auto Errors(int Error) {
 	if (Error == 1) {
-		return ("Fatal error")
+		return ("Fatal error");
 	}
 	else if (Error == 2) {
-		return ("Logical error")
+		return ("Logical error");
 	}
 	else if (Error == 3) {
-		return ("Syntax error")
+		return ("Syntax error");
 	}
 	else{
-		return ("Unknown error")
+		return ("Unknown error");
 	}
 }
 
