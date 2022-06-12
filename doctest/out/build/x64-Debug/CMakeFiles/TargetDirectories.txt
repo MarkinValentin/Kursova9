@@ -1,0 +1,3 @@
+C:/Users/пк/Desktop/Новая папка (3)/Kursova9/doctest/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/пк/Desktop/Новая папка (3)/Kursova9/doctest/out/build/x64-Debug/CMakeFiles/doctest.dir
+C:/Users/пк/Desktop/Новая папка (3)/Kursova9/doctest/out/build/x64-Debug/CMakeFiles/edit_cache.dir
