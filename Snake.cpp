@@ -73,7 +73,7 @@ void SetColor(ConsoleColor text, ConsoleColor background)
 /// 
 /// Функция флага
 /// 
-auto Work(flag) {
+auto Work(int flag) {
 	if (flag == 0) {
 		return false
 	}
@@ -81,7 +81,7 @@ auto Work(flag) {
 		return true
 	}
 	else {
-		return "Error"
+		return ("Error")
 	}
 }
 
@@ -142,7 +142,7 @@ void SnakeStart()
 /// 
 /// Функция вывода ошибок
 /// 
-auto Errors(int Eror) {
+auto Errors(int Error) {
 	if (Error == 1) {
 		return ("Fatal error")
 	}
@@ -152,7 +152,7 @@ auto Errors(int Eror) {
 	else if (Error == 3) {
 		return ("Syntax error")
 	}
-	esle{
+	else{
 		return ("Unknown error")
 	}
 }
