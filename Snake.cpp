@@ -51,7 +51,7 @@ enum ConsoleColor
 /// 
 /// Функция работоспособности
 /// 
-auto important(int value) {
+auto Important(int value) {
 	if (value > 0) {
 		return ("value > 0")
 	}
