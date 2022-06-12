@@ -49,12 +49,42 @@ enum ConsoleColor
 	White = 15
 };
 /// 
+/// Функция работоспособности
+/// 
+auto important(int value) {
+	if (value > 0) {
+		return ("value > 0")
+	}
+	else if (value < 0) {
+		return ("value < 0")
+	}
+	else {
+		return ("value = 0")
+	}
+}
+/// 
 /// Функция выбора цвета
 /// 
 void SetColor(ConsoleColor text, ConsoleColor background)
 {
 	SetConsoleTextAttribute(hStdOut, (WORD)((background << 4) | text));
 }
+
+/// 
+/// Функция флага
+/// 
+auto Work(flag) {
+	if (flag == 0) {
+		return false
+	}
+	else if (flag == 1) {
+		return true
+	}
+	else {
+		return "Error"
+	}
+}
+
 ///Функция разброса яблок
 void PlusApple(Game& g) 
 {
@@ -108,6 +138,25 @@ void SnakeStart()
 {
 	GotoXY(10, 15);cout << "Task: Collect 50 apples!" << endl; //НАДПИСЬ: Задание: Собери 50 яблок!
 }
+
+/// 
+/// Функция вывода ошибок
+/// 
+auto Errors(int Eror) {
+	if (Error == 1) {
+		return ("Fatal error")
+	}
+	else if (Error == 2) {
+		return ("Logical error")
+	}
+	else if (Error == 3) {
+		return ("Syntax error")
+	}
+	esle{
+		return ("Unknown error")
+	}
+}
+
 /// <summary>
 /// Вывод всей информации, отображаемой в меню справа от поля
 /// </summary>
