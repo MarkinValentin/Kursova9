@@ -5,9 +5,6 @@
 ## Цели
 + Главная цель данной работы - это получить код и продемонстрировать его работоспособность на защите.
 
-## Итоги
-+ В итоге, я получил рабочий код для предоставления его преподавателю.
-
 ## Как устанавливать?
 
 ```python
@@ -21,9 +18,6 @@ Git clone https://github.com/MarkinValentin/Kursova9.git
 
 ## Goals
 + The main goal of this work is to get the code and check its performance on the defense.
-
-## Results
-+ In the end, I got a working code to provide it to the teacher.
 
 ## How to install?
 ```python
