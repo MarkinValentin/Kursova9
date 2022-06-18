@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['plusapple_61',['PlusApple',['../_snail_8cpp.html#ae5abd9e08fbcdad5d3f3c4c802f53855',1,'Snail.cpp']]]
+  ['level_69',['Level',['../snake_8cpp.html#a6ecce94cdaa807c5a1f14911f886d186',1,'snake.cpp']]]
 ];

@@ -1,0 +1,294 @@
+\hypertarget{_snake_8cpp}{}\doxysection{New/\+Kursova9/\+Snake.cpp File Reference}
+\label{_snake_8cpp}\index{New/Kursova9/Snake.cpp@{New/Kursova9/Snake.cpp}}
+
+
+Файл с исполняемыми функцими  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+{\ttfamily \#include $<$conio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Class.\+hpp\char`\"{}}\newline
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} \{ \newline
+\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}{Black}} = 0
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}{Blue}} = 1
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}{Green}} = 2
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}{Cyan}} = 3
+, \newline
+\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}{Red}} = 4
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}{Magenta}} = 5
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}{Brown}} = 6
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}{Light\+Gray}} = 7
+, \newline
+\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}{Dark\+Gray}} = 8
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}{Light\+Blue}} = 9
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}{Light\+Green}} = 10
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}{Light\+Cyan}} = 11
+, \newline
+\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}{Light\+Red}} = 12
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}{Light\+Magenta}} = 13
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}{Yellow}} = 14
+, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}{White}} = 15
+ \}
+\item 
+enum \{ \mbox{\hyperlink{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}{END}}
+, \mbox{\hyperlink{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}{WALL}}
+, \mbox{\hyperlink{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}{PLUS}}
+, \mbox{\hyperlink{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}{MOVE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_snake_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}{Goto\+XY}} (int X, int Y)
+\item 
+auto \mbox{\hyperlink{_snake_8cpp_a085f988925a939664d25cfcf9ef8a137}{important}} (int value)
+\item 
+void \mbox{\hyperlink{_snake_8cpp_ab9924d9a342601953ccdccb52710092b}{Set\+Color}} (\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} text, \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}} background)
+\item 
+auto \mbox{\hyperlink{_snake_8cpp_a5f68dcda1d3ad75764d1cb9f5151dc2e}{Work}} (flag)
+\item 
+void \mbox{\hyperlink{_snake_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}{Plus\+Apple}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция разброса яблок \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snake_8cpp_a336b858bffffc543c56252f1f76baf5b}{Game\+Speed}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция старта змейки\+: ее координат и скорости \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snake_8cpp_a6ecce94cdaa807c5a1f14911f886d186}{Level}} ()
+\begin{DoxyCompactList}\small\item\em Вывод надписей \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_snake_8cpp_a87402161f83745865b997797e7f92746}{Snake\+Start}} ()
+\begin{DoxyCompactList}\small\item\em Вывод сообщения о задании \end{DoxyCompactList}\item 
+auto \mbox{\hyperlink{_snake_8cpp_a2e26a15550db90ef7f47e6de1931846d}{Errors}} (int Eror)
+\item 
+void \mbox{\hyperlink{_snake_8cpp_a2a4279c0b454248c039c231f57a512e7}{WALL\+\_\+2}} ()
+\begin{DoxyCompactList}\small\item\em Вывод всей информации, отображаемой в меню справа от поля \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_snake_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}{Move}} (\mbox{\hyperlink{class_game}{Game}} \&g)
+\begin{DoxyCompactList}\small\item\em Функция которая двигает и рисует \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+HANDLE \mbox{\hyperlink{_snake_8cpp_a36b9671cd6945563286390e4dc3316ab}{h\+Console}}
+\begin{DoxyCompactList}\small\item\em Вывод цветного текста в консоль \end{DoxyCompactList}\item 
+HANDLE \mbox{\hyperlink{_snake_8cpp_a70bfca3175ba9dedad6b54203a18c95c}{h\+Std\+Out}} = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)
+\begin{DoxyCompactList}\small\item\em HANDLE h\+Stdout, h\+Stdin;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Файл с исполняемыми функцими 
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}\label{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}} 
+\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily anonymous enum}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{END@{END}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!END@{END}}}\mbox{\Hypertarget{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}\label{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55badc6f24fd6915a3f2786a1b7045406924}} 
+END&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WALL@{WALL}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!WALL@{WALL}}}\mbox{\Hypertarget{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}\label{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55bafca2faad41310c7e71ec303ef789c53a}} 
+WALL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLUS@{PLUS}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!PLUS@{PLUS}}}\mbox{\Hypertarget{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}\label{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9}} 
+PLUS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOVE@{MOVE}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!MOVE@{MOVE}}}\mbox{\Hypertarget{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}\label{_snake_8cpp_a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62}} 
+MOVE&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}} 
+\index{Snake.cpp@{Snake.cpp}!ConsoleColor@{ConsoleColor}}
+\index{ConsoleColor@{ConsoleColor}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{ConsoleColor}{ConsoleColor}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}
+
+Выбор цвета \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Black@{Black}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Black@{Black}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaac1e9bce8242f443c54c7405223d616cd}} 
+Black&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Blue@{Blue}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Blue@{Blue}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf5e09dd1da4088464f264b7a3118bff8}} 
+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Green@{Green}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Green@{Green}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad0784a3f969fe736e8b271a5a161d106}} 
+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Cyan@{Cyan}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Cyan@{Cyan}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab0d4738f9c7f12049e52aa4e868bdc8b}} 
+Cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Red@{Red}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Red@{Red}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743}} 
+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Magenta@{Magenta}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Magenta@{Magenta}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc}} 
+Magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Brown@{Brown}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Brown@{Brown}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa99c15c8b7e6b048d571778c871622d38}} 
+Brown&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightGray@{LightGray}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightGray@{LightGray}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaab5a67106ffa41f1195b52a8109c745a}} 
+Light\+Gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DarkGray@{DarkGray}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!DarkGray@{DarkGray}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa4de15b8ee603dbccac7062665c37853f}} 
+Dark\+Gray&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightBlue@{LightBlue}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightBlue@{LightBlue}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa1a4360030daf53036ce1cd1668dc6243}} 
+Light\+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightGreen@{LightGreen}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightGreen@{LightGreen}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa6f3bae902f4a1a3b69152ad13382ab18}} 
+Light\+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightCyan@{LightCyan}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightCyan@{LightCyan}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaa60295ab538eb50ae469a14539c220ab6}} 
+Light\+Cyan&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightRed@{LightRed}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightRed@{LightRed}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaaf1f766b65249fac0dbddf379c1dcb7f7}} 
+Light\+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LightMagenta@{LightMagenta}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!LightMagenta@{LightMagenta}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaacc5278cccbe10813f713a337f4652568}} 
+Light\+Magenta&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Yellow@{Yellow}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!Yellow@{Yellow}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaabf28513245738599d13e3ce36bd16c82}} 
+Yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{White@{White}!Snake.cpp@{Snake.cpp}}\index{Snake.cpp@{Snake.cpp}!White@{White}}}\mbox{\Hypertarget{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}\label{_snake_8cpp_a821042d5f30537f776ce823c5d66aadaab548046646b36c12aa6ba841de500094}} 
+White&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_snake_8cpp_a2e26a15550db90ef7f47e6de1931846d}\label{_snake_8cpp_a2e26a15550db90ef7f47e6de1931846d}} 
+\index{Snake.cpp@{Snake.cpp}!Errors@{Errors}}
+\index{Errors@{Errors}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{Errors()}{Errors()}}
+{\footnotesize\ttfamily auto Errors (\begin{DoxyParamCaption}\item[{int}]{Eror }\end{DoxyParamCaption})}
+
+Функция вывода ошибок \mbox{\Hypertarget{_snake_8cpp_a336b858bffffc543c56252f1f76baf5b}\label{_snake_8cpp_a336b858bffffc543c56252f1f76baf5b}} 
+\index{Snake.cpp@{Snake.cpp}!GameSpeed@{GameSpeed}}
+\index{GameSpeed@{GameSpeed}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{GameSpeed()}{GameSpeed()}}
+{\footnotesize\ttfamily void Game\+Speed (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция старта змейки\+: ее координат и скорости 
+
+\mbox{\Hypertarget{_snake_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}\label{_snake_8cpp_a6db63ceadb12657ac8c5a46b21a4923b}} 
+\index{Snake.cpp@{Snake.cpp}!GotoXY@{GotoXY}}
+\index{GotoXY@{GotoXY}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{GotoXY()}{GotoXY()}}
+{\footnotesize\ttfamily void Goto\+XY (\begin{DoxyParamCaption}\item[{int}]{X,  }\item[{int}]{Y }\end{DoxyParamCaption})}
+
+Функция помещает курсор текстового экрана в точку с координатами х,у. \mbox{\Hypertarget{_snake_8cpp_a085f988925a939664d25cfcf9ef8a137}\label{_snake_8cpp_a085f988925a939664d25cfcf9ef8a137}} 
+\index{Snake.cpp@{Snake.cpp}!important@{important}}
+\index{important@{important}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{important()}{important()}}
+{\footnotesize\ttfamily auto important (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})}
+
+Функция работоспособности \mbox{\Hypertarget{_snake_8cpp_a6ecce94cdaa807c5a1f14911f886d186}\label{_snake_8cpp_a6ecce94cdaa807c5a1f14911f886d186}} 
+\index{Snake.cpp@{Snake.cpp}!Level@{Level}}
+\index{Level@{Level}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{Level()}{Level()}}
+{\footnotesize\ttfamily void Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод надписей 
+
+\mbox{\Hypertarget{_snake_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}\label{_snake_8cpp_a9c6d9ccc0d02ad8369b90af0a2f73e62}} 
+\index{Snake.cpp@{Snake.cpp}!Move@{Move}}
+\index{Move@{Move}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{Move()}{Move()}}
+{\footnotesize\ttfamily int Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция которая двигает и рисует 
+
+\mbox{\Hypertarget{_snake_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}\label{_snake_8cpp_ae5abd9e08fbcdad5d3f3c4c802f53855}} 
+\index{Snake.cpp@{Snake.cpp}!PlusApple@{PlusApple}}
+\index{PlusApple@{PlusApple}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{PlusApple()}{PlusApple()}}
+{\footnotesize\ttfamily void Plus\+Apple (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{g }\end{DoxyParamCaption})}
+
+
+
+Функция разброса яблок 
+
+\mbox{\Hypertarget{_snake_8cpp_ab9924d9a342601953ccdccb52710092b}\label{_snake_8cpp_ab9924d9a342601953ccdccb52710092b}} 
+\index{Snake.cpp@{Snake.cpp}!SetColor@{SetColor}}
+\index{SetColor@{SetColor}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{SetColor()}{SetColor()}}
+{\footnotesize\ttfamily void Set\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}]{text,  }\item[{\mbox{\hyperlink{_snake_8cpp_a821042d5f30537f776ce823c5d66aada}{Console\+Color}}}]{background }\end{DoxyParamCaption})}
+
+Функция выбора цвета \mbox{\Hypertarget{_snake_8cpp_a87402161f83745865b997797e7f92746}\label{_snake_8cpp_a87402161f83745865b997797e7f92746}} 
+\index{Snake.cpp@{Snake.cpp}!SnakeStart@{SnakeStart}}
+\index{SnakeStart@{SnakeStart}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{SnakeStart()}{SnakeStart()}}
+{\footnotesize\ttfamily void Snake\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод сообщения о задании 
+
+\mbox{\Hypertarget{_snake_8cpp_a2a4279c0b454248c039c231f57a512e7}\label{_snake_8cpp_a2a4279c0b454248c039c231f57a512e7}} 
+\index{Snake.cpp@{Snake.cpp}!WALL\_2@{WALL\_2}}
+\index{WALL\_2@{WALL\_2}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{WALL\_2()}{WALL\_2()}}
+{\footnotesize\ttfamily void WALL\+\_\+2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Вывод всей информации, отображаемой в меню справа от поля 
+
+\mbox{\Hypertarget{_snake_8cpp_a5f68dcda1d3ad75764d1cb9f5151dc2e}\label{_snake_8cpp_a5f68dcda1d3ad75764d1cb9f5151dc2e}} 
+\index{Snake.cpp@{Snake.cpp}!Work@{Work}}
+\index{Work@{Work}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{Work()}{Work()}}
+{\footnotesize\ttfamily auto Work (\begin{DoxyParamCaption}\item[{flag}]{ }\end{DoxyParamCaption})}
+
+Функция флага 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_snake_8cpp_a36b9671cd6945563286390e4dc3316ab}\label{_snake_8cpp_a36b9671cd6945563286390e4dc3316ab}} 
+\index{Snake.cpp@{Snake.cpp}!hConsole@{hConsole}}
+\index{hConsole@{hConsole}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{hConsole}{hConsole}}
+{\footnotesize\ttfamily HANDLE h\+Console}
+
+
+
+Вывод цветного текста в консоль 
+
+\mbox{\Hypertarget{_snake_8cpp_a70bfca3175ba9dedad6b54203a18c95c}\label{_snake_8cpp_a70bfca3175ba9dedad6b54203a18c95c}} 
+\index{Snake.cpp@{Snake.cpp}!hStdOut@{hStdOut}}
+\index{hStdOut@{hStdOut}!Snake.cpp@{Snake.cpp}}
+\doxysubsubsection{\texorpdfstring{hStdOut}{hStdOut}}
+{\footnotesize\ttfamily HANDLE h\+Std\+Out = Get\+Std\+Handle(STD\+\_\+\+OUTPUT\+\_\+\+HANDLE)}
+
+
+
+HANDLE h\+Stdout, h\+Stdin;. 
+

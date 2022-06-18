@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['pause_32',['pause',['../class_game.html#a4a9275b8ba47d72c8c802ba901b6f136',1,'Game']]],
-  ['pcount_33',['PCount',['../class_snake.html#a2cb0ba25b3d5c5de65c11a99dd4c2e66',1,'Snake']]],
-  ['plus_34',['PLUS',['../_snail_8cpp.html#a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9',1,'Snail.cpp']]],
-  ['plusapple_35',['PlusApple',['../_snail_8cpp.html#ae5abd9e08fbcdad5d3f3c4c802f53855',1,'Snail.cpp']]]
+  ['magenta_29',['Magenta',['../snake_8cpp.html#a821042d5f30537f776ce823c5d66aadaab5059a620e2c7dc57556b1e275c2f9bc',1,'snake.cpp']]],
+  ['main_30',['main',['../_main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'Main.cpp']]],
+  ['main_2ecpp_31',['Main.cpp',['../_main_8cpp.html',1,'']]],
+  ['move_32',['MOVE',['../snake_8cpp.html#a06fc87d81c62e9abb8790b6e5713c55baed3ef32890b6da0919b57254c5206c62',1,'snake.cpp']]],
+  ['move_33',['Move',['../snake_8cpp.html#a9c6d9ccc0d02ad8369b90af0a2f73e62',1,'snake.cpp']]]
 ];

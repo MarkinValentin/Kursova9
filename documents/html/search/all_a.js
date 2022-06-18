@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['red_36',['Red',['../_snail_8cpp.html#a821042d5f30537f776ce823c5d66aadaad3163c1fcda01965b692ec2c3122b743',1,'Snail.cpp']]],
-  ['right_37',['RIGHT',['../_class_8hpp.html#ae1baa9f42256960b9f5b2161a808a3acaec8379af7490bb9eaaf579cf17876f38',1,'Class.hpp']]],
-  ['route_38',['route',['../class_game.html#a635b8ff516cfe86888f57ce897de89fc',1,'Game']]]
+  ['pause_34',['pause',['../class_game.html#a4a9275b8ba47d72c8c802ba901b6f136',1,'Game']]],
+  ['pcount_35',['PCount',['../class_snake.html#a2cb0ba25b3d5c5de65c11a99dd4c2e66',1,'Snake']]],
+  ['plus_36',['PLUS',['../snake_8cpp.html#a06fc87d81c62e9abb8790b6e5713c55ba87fe59ef12c3d13dc2a4d14c9b16c1f9',1,'snake.cpp']]],
+  ['plusapple_37',['PlusApple',['../snake_8cpp.html#ae5abd9e08fbcdad5d3f3c4c802f53855',1,'snake.cpp']]]
 ];
